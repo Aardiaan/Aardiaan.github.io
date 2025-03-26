@@ -175,13 +175,17 @@ h2, h3 {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    align-items: center;
+    align-items: stretch; /* Changed from center to stretch */
     justify-content: space-between;
 }
 
 #index {
     flex: 1;
     min-width: 300px;
+    display: flex; /* Added display flex */
+    flex-direction: column; /* Added to organize content vertically */
+    height: 100%; /* Ensures full height */
+    justify-content: space-between;
 }
 
 #index h3 {
@@ -196,10 +200,17 @@ h2, h3 {
     line-height: 1.4;
 }
 
+#index p { /* Pushes the paragraph to the bottom */
+    margin-bottom: 0; /* Removes default margin to align with photos */
+}
+
 #index_photo {
     flex: 1;
     min-width: 300px;
     text-align: center;
+    display: flex; /* Added display flex */
+    flex-direction: column; /* Added to organize content vertically */
+    height: 100%; /* Ensures full height */
 }
 
 #index_photo img {
@@ -207,11 +218,57 @@ h2, h3 {
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 15px; /* Added margin between images */
+    object-fit: cover; /* Ensures proper image sizing */
+}
+
+#index_photo img:last-child {
+    margin-bottom: 0; /* Removes margin from last image */
 }
 
 #index_photo img:hover {
     transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+#index_photo h3 {
+    margin-bottom: 20px;
+}
+
+/* Make both sections in index_main equal height with proper contents */
+#index_main > section {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to top */
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Restored transition for hover effect */
+}
+
+/* Restore hover effect for these specific sections */
+#index_main > section:hover {
+    transform: translateY(-5px); /* Slightly more pronounced lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Override the general section::before styling to give these sections a distinct accent */
+#index_main > section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px; /* Slightly thicker accent line */
+    background: linear-gradient(90deg, #af382d, #e05e51);
+    transition: height 0.3s ease; /* Animate the accent line */
+}
+
+#index_main > section:hover::before {
+    height: 7px; /* Grow the accent line on hover */
 }
 
 /* Text Main Section */
