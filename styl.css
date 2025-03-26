@@ -15,15 +15,18 @@ body {
     margin: 0 auto;
 }
 
-/* Header Styles */
+/* Header Styles - Updated to be more compact and integrated with nav */
 header {
     background-color: #af382d;
     color: white;
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header::before {
@@ -39,56 +42,67 @@ header::before {
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
     letter-spacing: 0.5px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 header p {
-    margin-top: 0.5rem;
-    font-size: 1.2rem;
+    margin-top: 0.25rem;
+    font-size: 1rem;
     opacity: 0.9;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Navigation Styles */
+/* Navigation Styles - Updated for integration with header */
 nav {
-    background-color: #fff;
+    background-color: #8c2e25;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 0.5rem 0;
+    padding: 0.3rem 0;
+    margin-top: 0;
+    width: 60%;
+    border-radius: 10px;
 }
 
 #pbox {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
-    margin: 1rem 0;
+    gap: 10px;
+    margin: 0;
     padding: 0 20px;
 }
 
-/* Button Styling */
+/* Button Styling - Updated for compact nav */
 #przycisk {
-    background-color: #af382d;
-    border-radius: 25px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
     text-decoration: none;
     color: white;
     display: inline-block;
-    padding: 12px 28px;
+    padding: 8px 20px;
     box-sizing: border-box;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 4px 6px rgba(175, 56, 45, 0.25);
     transition: all 0.3s ease;
+    font-size: 0.9rem;
 }
 
 #przycisk:hover {
-    background-color: #c04236;
+    background-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
-    box-shadow: 0 6px 10px rgba(175, 56, 45, 0.3);
+}
+
+/* Integrated header-nav container */
+.header-nav-container {
+    width: 100%;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
 }
 
 /* Content Sections */
