@@ -75,3 +75,14 @@ footer {
         margin-bottom: 20px;
     }
 }
+#pbox
+{
+    justify-content: space-between;
+}
+#przycisk
+{
+    background-color: #af382d;
+    border-radius: 20%;
+    text-decoration: none;
+    color: white;
+}
