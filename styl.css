@@ -19,7 +19,7 @@ body {
 header {
     background-color: #af382d;
     color: white;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     text-align: center;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
     position: relative;
@@ -35,12 +35,12 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-bottom: 15px;
-    gap: 30px;
+    margin-bottom: 10px;
+    gap: 20px;
 }
 
 .erasmus-logo {
-    height: 80px;
+    height: 60px;
     width: auto;
     transition: transform 0.3s ease;
 }
@@ -52,11 +52,11 @@ header {
 .flags-container {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .flag {
-    height: 40px;
+    height: 30px;
     width: auto;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -80,14 +80,14 @@ header::before {
 
 header h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
     letter-spacing: 0.5px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 header p {
     margin-top: 0.25rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     opacity: 0.9;
     max-width: 800px;
     margin-left: auto;
@@ -283,7 +283,7 @@ h2, h3 {
     height: auto; /* Change from 100% to auto */
     display: flex;
     flex-direction: column;
-    min-height: 80%; /* Set minimum height instead of fixed height */
+    min-height: 85%; /* Set minimum height instead of fixed height */
 }
 
 /* Make the section boxes have equal heights */
