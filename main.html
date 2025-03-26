@@ -86,5 +86,68 @@
     <footer>
         <p>&copy; 2025 Erasmus+ Turcja-Manavgat | Stronę przygotował: Wiktor Ludera</p>
     </footer>
+    
+    <!-- Fixed Sticky Header JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                const headerContainer = document.querySelector('.header-nav-container');
+                const header = document.querySelector('header');
+                const headerHeight = headerContainer.offsetHeight;
+                let isSticky = false;
+                
+                // Function to handle scroll with better performance
+                function handleScroll() {
+                    const scrollY = window.scrollY || window.pageYOffset;
+                    
+                    if (scrollY > 100) { // Increased threshold for better UX
+                        if (!isSticky) {
+                            header.classList.add('sticky-header');
+                            document.body.classList.add('has-sticky-header');
+                            document.body.style.paddingTop = headerHeight + 'px';
+                            isSticky = true;
+                        }
+                    } else {
+                        if (isSticky) {
+                            header.classList.remove('sticky-header');
+                            document.body.classList.remove('has-sticky-header');
+                            document.body.style.paddingTop = '0';
+                            isSticky = false;
+                        }
+                    }
+                }
+                
+                // Use debounced scroll for performance
+                let scrollTimeout;
+                window.addEventListener('scroll', function() {
+                    if (!scrollTimeout) {
+                        scrollTimeout = setTimeout(function() {
+                            handleScroll();
+                            scrollTimeout = null;
+                        }, 10);
+                    }
+                });
+                
+                // Initial check
+                handleScroll();
+                
+                // Update header height on resize
+                let resizeTimeout;
+                window.addEventListener('resize', function() {
+                    clearTimeout(resizeTimeout);
+                    resizeTimeout = setTimeout(function() {
+                        const newHeaderHeight = headerContainer.offsetHeight;
+                        if (isSticky) {
+                            document.body.style.paddingTop = newHeaderHeight + 'px';
+                        }
+                    }, 50);
+                });
+                
+                console.log("Sticky header initialized successfully");
+            } catch (error) {
+                console.error("Error initializing sticky header:", error);
+            }
+        });
+    </script>
 </body>
 </html>
