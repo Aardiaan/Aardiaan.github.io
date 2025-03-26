@@ -509,3 +509,271 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* Add these styles at the end of your CSS file */
+
+/* Gallery Page Styling - Updated */
+.gallery-main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.gallery-page {
+    display: none;
+}
+
+.gallery-page.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+    transform: translateY(0);
+}
+
+/* Pagination Styling */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    gap: 15px;
+}
+
+.pagination-btn {
+    background-color: white;
+    border: 2px solid #af382d;
+    color: #af382d;
+    padding: 8px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.pagination-btn:hover {
+    background-color: #af382d;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.page-indicators {
+    display: flex;
+    gap: 8px;
+}
+
+.page-indicator {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.page-indicator:hover {
+    border-color: #af382d;
+    color: #af382d;
+}
+
+.page-indicator.active {
+    background-color: #af382d;
+    color: white;
+    border-color: #af382d;
+}
+
+/* Lightbox Styling */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    animation: zoomIn 0.3s ease;
+}
+
+#lightbox-img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+#lightbox-caption {
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: color 0.3s ease;
+}
+
+.close-lightbox:hover {
+    color: #af382d;
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lightbox-nav:hover {
+    background: rgba(175, 56, 45, 0.7);
+}
+
+.lightbox-nav.prev {
+    left: 20px;
+}
+
+.lightbox-nav.next {
+    right: 20px;
+}
+
+/* Animation for page transition */
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive adjustments for gallery */
+@media screen and (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .gallery-item img {
+        height: 180px;
+    }
+    
+    .pagination-btn {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .page-indicator {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .lightbox-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .gallery-item img {
+        height: 150px;
+    }
+    
+    .pagination {
+        flex-wrap: wrap;
+    }
+    
+    .close-lightbox {
+        top: 10px;
+        right: 10px;
+        font-size: 28px;
+    }
+    
+    #lightbox-caption {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}

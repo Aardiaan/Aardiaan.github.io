@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria zdjęć - Erasmus+ Turcja - Manavgat 2025</title>
     <link href="styl.css" rel="stylesheet">
+    <!-- Font Awesome for navigation icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -21,19 +23,273 @@
         </div>
     </nav>
 
-    <div class="gallery-container">
-        <img src="linux.jfif" alt="Zdjęcie z projektu 1">
-        <img src="linux.jfif" alt="Zdjęcie z projektu 2">
-        <img src="linux.jfif" alt="Zdjęcie z projektu 3">
-        <img src="linux.jfif" alt="Zdjęcie z projektu 4">
-        <img src="linux.jfif" alt="Zdjęcie z projektu 5">
-        <img src="linux.jfif" alt="Zdjęcie z projektu 6">
-    </div>
+    <main class="gallery-main">
+        <!-- Gallery Pages Container -->
+        <div class="gallery-pages-container">
+            <!-- Page 1 -->
+            <div class="gallery-page active" data-page="1">
+                <div class="gallery-container">
+                    <div class="gallery-item" onclick="openLightbox('linux.jfif', 'Zdjęcie z projektu 1')">
+                        <img src="linux.jfif" alt="Zdjęcie z projektu 1">
+                        <div class="gallery-caption">Zdjęcie 1</div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('linux.jfif', 'Zdjęcie z projektu 2')">
+                        <img src="linux.jfif" alt="Zdjęcie z projektu 2">
+                        <div class="gallery-caption">Zdjęcie 2</div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('linux.jfif', 'Zdjęcie z projektu 3')">
+                        <img src="linux.jfif" alt="Zdjęcie z projektu 3">
+                        <div class="gallery-caption">Zdjęcie 3</div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('linux.jfif', 'Zdjęcie z projektu 4')">
+                        <img src="linux.jfif" alt="Zdjęcie z projektu 4">
+                        <div class="gallery-caption">Zdjęcie 4</div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('linux.jfif', 'Zdjęcie z projektu 5')">
+                        <img src="linux.jfif" alt="Zdjęcie z projektu 5">
+                        <div class="gallery-caption">Zdjęcie 5</div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('linux.jfif', 'Zdjęcie z projektu 6')">
+                        <img src="linux.jfif" alt="Zdjęcie z projektu 6">
+                        <div class="gallery-caption">Zdjęcie 6</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Page 2 -->
+            <div class="gallery-page" data-page="2">
+                <div class="gallery-container">
+                    <div class="gallery-item" onclick="openLightbox('linux.jfif', 'Zdjęcie z projektu 7')">
+                        <img src="linux.jfif" alt="Zdjęcie z projektu 7">
+                        <div class="gallery-caption">Zdjęcie 7</div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('linux.jfif', 'Zdjęcie z projektu 8')">
+                        <img src="linux.jfif" alt="Zdjęcie z projektu 8">
+                        <div class="gallery-caption">Zdjęcie 8</div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('linux.jfif', 'Zdjęcie z projektu 9')">
+                        <img src="linux.jfif" alt="Zdjęcie z projektu 9">
+                        <div class="gallery-caption">Zdjęcie 9</div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('linux.jfif', 'Zdjęcie z projektu 10')">
+                        <img src="linux.jfif" alt="Zdjęcie z projektu 10">
+                        <div class="gallery-caption">Zdjęcie 10</div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('linux.jfif', 'Zdjęcie z projektu 11')">
+                        <img src="linux.jfif" alt="Zdjęcie z projektu 11">
+                        <div class="gallery-caption">Zdjęcie 11</div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('linux.jfif', 'Zdjęcie z projektu 12')">
+                        <img src="linux.jfif" alt="Zdjęcie z projektu 12">
+                        <div class="gallery-caption">Zdjęcie 12</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Page 3 -->
+            <div class="gallery-page" data-page="3">
+                <div class="gallery-container">
+                    <div class="gallery-item" onclick="openLightbox('linux.jfif', 'Zdjęcie z projektu 13')">
+                        <img src="linux.jfif" alt="Zdjęcie z projektu 13">
+                        <div class="gallery-caption">Zdjęcie 13</div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('linux.jfif', 'Zdjęcie z projektu 14')">
+                        <img src="linux.jfif" alt="Zdjęcie z projektu 14">
+                        <div class="gallery-caption">Zdjęcie 14</div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('linux.jfif', 'Zdjęcie z projektu 15')">
+                        <img src="linux.jfif" alt="Zdjęcie z projektu 15">
+                        <div class="gallery-caption">Zdjęcie 15</div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('linux.jfif', 'Zdjęcie z projektu 16')">
+                        <img src="linux.jfif" alt="Zdjęcie z projektu 16">
+                        <div class="gallery-caption">Zdjęcie 16</div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('linux.jfif', 'Zdjęcie z projektu 17')">
+                        <img src="linux.jfif" alt="Zdjęcie z projektu 17">
+                        <div class="gallery-caption">Zdjęcie 17</div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('linux.jfif', 'Zdjęcie z projektu 18')">
+                        <img src="linux.jfif" alt="Zdjęcie z projektu 18">
+                        <div class="gallery-caption">Zdjęcie 18</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pagination -->
+        <div class="pagination">
+            <button class="pagination-btn" onclick="changePage('prev')">
+                <i class="fas fa-chevron-left"></i> Poprzednia
+            </button>
+            <div class="page-indicators">
+                <span class="page-indicator active" data-page="1" onclick="goToPage(1)">1</span>
+                <span class="page-indicator" data-page="2" onclick="goToPage(2)">2</span>
+                <span class="page-indicator" data-page="3" onclick="goToPage(3)">3</span>
+            </div>
+            <button class="pagination-btn" onclick="changePage('next')">
+                Następna <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox">
+            <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="">
+                <div id="lightbox-caption"></div>
+            </div>
+            <button class="lightbox-nav prev" onclick="navigateLightbox('prev')">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-nav next" onclick="navigateLightbox('next')">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
 
-    <a href="main.html" class="back-link">Wróć do strony głównej</a>
+        <a href="main.html" class="back-link">Wróć do strony głównej</a>
+    </main>
 
     <footer>
         <p>&copy; 2025 Erasmus+ Turcja-Manavgat | Stronę przygotował: Wiktor Ludera</p>
     </footer>
+
+    <!-- JavaScript for pagination and lightbox -->
+    <script>
+        let currentPage = 1;
+        const totalPages = 3;
+        let currentLightboxIndex = 0;
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        // Page navigation
+        function changePage(direction) {
+            if (direction === 'next' && currentPage < totalPages) {
+                goToPage(currentPage + 1);
+            } else if (direction === 'prev' && currentPage > 1) {
+                goToPage(currentPage - 1);
+            }
+        }
+        
+        function goToPage(pageNum) {
+            // Hide all pages
+            document.querySelectorAll('.gallery-page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.querySelector(`.gallery-page[data-page="${pageNum}"]`).classList.add('active');
+            
+            // Update page indicators
+            document.querySelectorAll('.page-indicator').forEach(indicator => {
+                indicator.classList.remove('active');
+            });
+            document.querySelector(`.page-indicator[data-page="${pageNum}"]`).classList.add('active');
+            
+            // Update current page
+            currentPage = pageNum;
+            
+            // Scroll to top of gallery
+            document.querySelector('.gallery-main').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Lightbox functions
+        function openLightbox(imgSrc, caption) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            
+            // Find index of current image for navigation
+            for (let i = 0; i < galleryItems.length; i++) {
+                const item = galleryItems[i];
+                if (item.querySelector('img').src.includes(imgSrc) && 
+                    item.querySelector('.gallery-caption').textContent === caption) {
+                    currentLightboxIndex = i;
+                    break;
+                }
+            }
+            
+            // Set image and caption
+            lightboxImg.src = imgSrc;
+            lightboxCaption.textContent = caption;
+            
+            // Show lightbox with animation
+            lightbox.style.display = 'flex';
+            setTimeout(() => {
+                lightbox.style.opacity = '1';
+            }, 10);
+            
+            // Prevent body scrolling
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.opacity = '0';
+            setTimeout(() => {
+                lightbox.style.display = 'none';
+            }, 300);
+            
+            // Re-enable body scrolling
+            document.body.style.overflow = 'auto';
+        }
+        
+        function navigateLightbox(direction) {
+            // Calculate new index
+            let newIndex;
+            if (direction === 'next') {
+                newIndex = (currentLightboxIndex + 1) % galleryItems.length;
+            } else {
+                newIndex = (currentLightboxIndex - 1 + galleryItems.length) % galleryItems.length;
+            }
+            
+            // Get page of the new index
+            const itemsPerPage = 6;
+            const pageOfNewIndex = Math.floor(newIndex / itemsPerPage) + 1;
+            
+            // If page changed, navigate to that page
+            if (pageOfNewIndex !== currentPage) {
+                goToPage(pageOfNewIndex);
+            }
+            
+            // Get new image and caption
+            const newItem = galleryItems[newIndex];
+            const newImgSrc = newItem.querySelector('img').src;
+            const newCaption = newItem.querySelector('.gallery-caption').textContent;
+            
+            // Update current index
+            currentLightboxIndex = newIndex;
+            
+            // Update lightbox content with animation
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            
+            lightboxImg.style.opacity = '0';
+            setTimeout(() => {
+                lightboxImg.src = newImgSrc;
+                lightboxCaption.textContent = newCaption;
+                lightboxImg.style.opacity = '1';
+            }, 200);
+        }
+        
+        // Close lightbox when clicking outside the image
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (document.getElementById('lightbox').style.display === 'flex') {
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                } else if (e.key === 'ArrowRight') {
+                    navigateLightbox('next');
+                } else if (e.key === 'ArrowLeft') {
+                    navigateLightbox('prev');
+                }
+            }
+        });
+    </script>
 </body>
 </html>
