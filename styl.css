@@ -17,7 +17,7 @@ body {
 
 /* Header Styles - Redesigned to be more compact and attractive */
 header {
-    background-color: #af382d;
+    background-color: #5EB160;
     color: white;
     padding: 1rem;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
@@ -48,7 +48,7 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(175, 56, 45, 0.75); /* Semi-transparent background */
+    background: rgba(94, 177, 96, 0.75); /* Semi-transparent background */
     z-index: -1;
     backdrop-filter: blur(4px); /* Slight blur effect for better readability */
     -webkit-backdrop-filter: blur(4px); /* For Safari support */
@@ -56,7 +56,7 @@ header {
 
 /* Add hover effect to increase opacity on hover */
 .sticky-header:hover::before {
-    background: rgba(175, 56, 45, 0.9); /* More opaque on hover */
+    background: rgba(94, 177, 96, 0.9); /* More opaque on hover */
 }
 
 @keyframes slideDown {
@@ -94,7 +94,7 @@ header {
 
 /* Make the navigation background transparent in sticky mode */
 .sticky-header nav {
-    background-color: rgba(140, 46, 37, 0.6);
+    background-color: rgba(74, 142, 76, 0.6);
     margin-top: 8px;
     transition: all 0.3s ease;
 }
@@ -190,7 +190,7 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(175, 56, 45, 0.9) 0%, rgba(140, 46, 37, 0.95) 100%);
+    background: linear-gradient(135deg, rgba(94, 177, 96, 0.9) 0%, rgba(74, 142, 76, 0.95) 100%);
     z-index: -1;
     transition: background 0.3s ease;
 }
@@ -266,7 +266,7 @@ header p {
 
 /* Navigation Styles - Updated for horizontal integration */
 nav {
-    background-color: rgba(140, 46, 37, 0.8);
+    background-color: rgba(74, 142, 76, 0.8);
     border-radius: 8px;
     margin-top: 12px;
     max-width: 600px;
@@ -438,7 +438,7 @@ section:hover {
 }
 
 h2, h3 {
-    color: #af382d;
+    color: #5EB160;
     border-bottom: 2px solid #eee;
     padding-bottom: 0.5rem;
     margin-top: 0;
@@ -537,7 +537,7 @@ h2, h3 {
     left: 0;
     width: 100%;
     height: 5px; /* Slightly thicker accent line */
-    background: linear-gradient(90deg, #af382d, #e05e51);
+    background: linear-gradient(90deg, #5EB160, #7BC97D);
     transition: height 0.3s ease; /* Animate the accent line */
 }
 
@@ -592,12 +592,12 @@ section::before {
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, #af382d, #e05e51);
+    background: linear-gradient(90deg, #5EB160, #7BC97D);
 }
 
 /* Enhance heading styles */
 h2, h3 {
-    color: #af382d;
+    color: #5EB160;
     border-bottom: 2px solid #eee;
     padding-bottom: 0.5rem;
     margin-top: 0;
@@ -611,7 +611,7 @@ h3::after {
     left: 0;
     width: 50px;
     height: 2px;
-    background-color: #af382d;
+    background-color: #5EB160;
 }
 
 /* Improve paragraph spacing */
@@ -666,7 +666,7 @@ ul li::before {
     top: 10px;
     width: 6px;
     height: 6px;
-    background-color: #af382d;
+    background-color: #5EB160;
     border-radius: 50%;
 }
 
@@ -723,18 +723,18 @@ ul li::before {
     display: block;
     text-align: center;
     font-size: 1.2em;
-    color: #af382d;
+    color: #5EB160;
     text-decoration: none;
     margin: 30px auto;
     padding: 10px 20px;
     max-width: 250px;
-    border: 2px solid #af382d;
+    border: 2px solid #5EB160;
     border-radius: 30px;
     transition: all 0.3s ease;
 }
 
 .back-link:hover {
-    background-color: #af382d;
+    background-color: #5EB160;
     color: white;
     transform: translateY(-2px);
 }
@@ -743,7 +743,7 @@ ul li::before {
 footer {
     text-align: center;
     padding: 1.5rem;
-    background-color: #af382d;
+    background-color: #5EB160;
     color: white;
     margin-top: 2rem;
     box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.1);
@@ -778,7 +778,7 @@ footer {
 
 .institution-info h3 {
     margin-top: 0;
-    color: #af382d;
+    color: #5EB160;
 }
 
 /* Responsive Design */
@@ -887,7 +887,7 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(175, 56, 45, 0.1) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(94, 177, 96, 0.1) 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -984,8 +984,8 @@ footer {
 
 .pagination-btn {
     background-color: white;
-    border: 2px solid #af382d;
-    color: #af382d;
+    border: 2px solid #5EB160;
+    color: #5EB160;
     padding: 8px 15px;
     border-radius: 25px;
     cursor: pointer;
@@ -997,7 +997,7 @@ footer {
 }
 
 .pagination-btn:hover {
-    background-color: #af382d;
+    background-color: #5EB160;
     color: white;
     transform: translateY(-2px);
 }
@@ -1021,14 +1021,14 @@ footer {
 }
 
 .page-indicator:hover {
-    border-color: #af382d;
-    color: #af382d;
+    border-color: #5EB160;
+    color: #5EB160;
 }
 
 .page-indicator.active {
-    background-color: #af382d;
+    background-color: #5EB160;
     color: white;
-    border-color: #af382d;
+    border-color: #5EB160;
 }
 
 /* Lightbox Styling */
@@ -1083,7 +1083,7 @@ footer {
 }
 
 .close-lightbox:hover {
-    color: #af382d;
+    color: #5EB160;
 }
 
 .lightbox-nav {
@@ -1105,7 +1105,7 @@ footer {
 }
 
 .lightbox-nav:hover {
-    background: rgba(175, 56, 45, 0.7);
+    background: rgba(94, 177, 96, 0.7);
 }
 
 .lightbox-nav.prev {
@@ -1206,7 +1206,7 @@ footer {
     width: 100%;
     height: 250px;
     object-fit: cover;
-    border-bottom: 3px solid #af382d;
+    border-bottom: 3px solid #5EB160;
 }
 
 .practice-info {
@@ -1215,7 +1215,7 @@ footer {
 
 .practice-info h3 {
     margin-top: 0;
-    color: #af382d;
+    color: #5EB160;
     font-size: 1.4rem;
 }
 
@@ -1243,7 +1243,7 @@ footer {
         width: 30%;
         height: auto;
         border-bottom: none;
-        border-right: 3px solid #af382d;
+        border-right: 3px solid #5EB160;
     }
     
     .practice-info {
@@ -1309,7 +1309,7 @@ footer {
     /* Condense the navigation in sticky mode */
     .sticky-header nav {
         margin-top: 2px;
-        background-color: rgba(140, 46, 37, 0.8);
+        background-color: rgba(74, 142, 76, 0.8);
     }
     
     .sticky-header #pbox {
