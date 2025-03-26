@@ -1258,3 +1258,148 @@ footer {
         height: 180px;
     }
 }
+
+/* Optimized sticky header for mobile devices */
+@media screen and (max-width: 768px) {
+    /* Make the sticky header more compact */
+    .sticky-header {
+        padding: 0.2rem 0.5rem;
+    }
+    
+    .sticky-header .header-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5px;
+        flex-wrap: nowrap; /* Prevent wrapping */
+    }
+    
+    .sticky-header .header-left {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 0;
+    }
+    
+    .sticky-header .erasmus-logo {
+        height: 30px;
+    }
+    
+    .sticky-header h1 {
+        font-size: 0.85rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 160px;
+    }
+    
+    .sticky-header p {
+        display: none;
+    }
+    
+    .sticky-header .flags-container {
+        margin: 0;
+        gap: 5px;
+    }
+    
+    .sticky-header .flag {
+        height: 20px;
+    }
+    
+    /* Condense the navigation in sticky mode */
+    .sticky-header nav {
+        margin-top: 2px;
+        background-color: rgba(140, 46, 37, 0.8);
+    }
+    
+    .sticky-header #pbox {
+        flex-direction: row; /* Make buttons horizontal instead of vertical */
+        flex-wrap: wrap;
+        padding: 3px 6px;
+        gap: 3px;
+    }
+    
+    .sticky-header #przycisk {
+        padding: 4px 8px;
+        font-size: 0.65rem;
+        margin: 0;
+        width: auto; /* Override the default width */
+        border-radius: 15px;
+    }
+    
+    /* Adjust body padding for the new header height */
+    body.has-sticky-header {
+        padding-top: 110px; /* Significantly reduced from 220px */
+    }
+}
+
+/* Further optimizations for smaller phones */
+@media screen and (max-width: 480px) {
+    .sticky-header h1 {
+        max-width: 120px; /* Even smaller title for tiny screens */
+    }
+    
+    .sticky-header .erasmus-logo {
+        height: 25px;
+    }
+    
+    .sticky-header .flag {
+        height: 18px;
+    }
+    
+    .sticky-header nav {
+        max-width: 100%;
+    }
+    
+    .sticky-header #pbox {
+        justify-content: center;
+    }
+    
+    body.has-sticky-header {
+        padding-top: 100px; /* Further reduced */
+    }
+}
+
+/* Fix for iPhone SE and other very small devices */
+@media screen and (max-width: 375px) {
+    .sticky-header .header-content {
+        padding: 2px 0;
+    }
+    
+    .sticky-header h1 {
+        max-width: 100px;
+        font-size: 0.75rem;
+    }
+    
+    .sticky-header #przycisk {
+        padding: 3px 6px;
+        font-size: 0.6rem;
+    }
+    
+    body.has-sticky-header {
+        padding-top: 90px;
+    }
+}
+
+/* Mobile Optimizations - New Section */
+@media screen and (max-width: 480px) {
+    /* Update these properties to be more compact */
+    #pbox {
+        flex-direction: row; /* Change from column to row */
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        padding: 5px;
+    }
+    
+    #przycisk {
+        width: auto; /* Override the 80% width */
+        text-align: center;
+        padding: 5px 10px;
+        font-size: 0.75rem;
+        margin: 2px;
+    }
+    
+    /* ...keep other existing mobile optimizations... */
+}
