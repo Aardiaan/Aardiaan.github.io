@@ -1,89 +1,338 @@
+/* Base Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     background-color: #f4f4f9;
     color: #333;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
+/* Container Layout */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
 header {
     background-color: #af382d;
     color: white;
-    padding: 20px;
+    padding: 2rem;
     text-align: center;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(175, 56, 45, 0.8) 0%, rgba(175, 56, 45, 0.9) 100%);
+    z-index: -1;
 }
 
 header h1 {
     margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 0.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 header p {
-    margin-top: 5px;
-    font-size: 1.2em;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+}
+
+#pbox {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 1rem 0;
+    padding: 0 20px;
+}
+
+/* Button Styling */
+#przycisk {
+    background-color: #af382d;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 12px 28px;
+    box-sizing: border-box;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(175, 56, 45, 0.25);
+    transition: all 0.3s ease;
+}
+
+#przycisk:hover {
+    background-color: #c04236;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(175, 56, 45, 0.3);
+}
+
+/* Content Sections */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 section {
-    margin: 20px;
-    padding: 20px;
+    margin: 2rem auto;
+    padding: 2rem;
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-h2 {
+section:hover {
+    transform: translateY(-3px);
+}
+
+h2, h3 {
     color: #af382d;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-top: 0;
 }
 
+/* Index Main Section */
+#index_main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#index {
+    flex: 1;
+    min-width: 300px;
+}
+
+#index h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#index h4 {
+    font-size: 1.5rem;
+    color: #555;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+#index_photo {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+#index_photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+#index_photo img:hover {
+    transform: scale(1.02);
+}
+
+/* Text Main Section */
+#text_main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+#about_project, #project_goals {
+    height: 100%;
+}
+
+/* List Styling */
 ul {
     list-style-type: square;
-    padding-left: 20px;
+    padding-left: 1.5rem;
 }
 
+ul li {
+    margin-bottom: 0.8rem;
+    position: relative;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    background-color: #af382d;
+    border-radius: 50%;
+}
+
+/* Image Gallery */
 .image-container {
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .image-container img {
     width: 30%;
+    min-width: 250px;
     height: auto;
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    object-fit: cover;
 }
 
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #af382d;
-    color: white;
-    margin-top: 20px;
+.image-container img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-.container {
-    width: 80%;
+/* Gallery Page Styling */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
+.gallery-container img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Back Link Styling */
+.back-link {
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    color: #af382d;
+    text-decoration: none;
+    margin: 30px auto;
+    padding: 10px 20px;
+    max-width: 250px;
+    border: 2px solid #af382d;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #af382d;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #af382d;
+    color: white;
+    margin-top: 2rem;
+    box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Institution Page Styling */
+.institution-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.institution-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.institution-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.institution-info {
+    padding: 20px;
+}
+
+.institution-info h3 {
+    margin-top: 0;
+    color: #af382d;
+}
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
-    .image-container {
+    .container {
+        width: 95%;
+    }
+    
+    #pbox {
         flex-direction: column;
         align-items: center;
     }
+    
+    #przycisk {
+        width: 80%;
+        text-align: center;
+        margin: 5px 0;
+    }
 
     .image-container img {
-        width: 80%;
-        margin-bottom: 20px;
+        width: 100%;
+        margin-bottom: 1.5rem;
     }
-}
-#pbox
-{
-    justify-content: space-between;
-}
-#przycisk
-{
-    background-color: #af382d;
-    border-radius: 20%;
-    text-decoration: none;
-    color: white;
-    width: 2px;
+    
+    header {
+        padding: 1.5rem 1rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
 }
