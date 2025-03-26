@@ -29,6 +29,44 @@ header {
     align-items: center;
 }
 
+/* Logo and flags container */
+.header-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    gap: 30px;
+}
+
+.erasmus-logo {
+    height: 80px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.erasmus-logo:hover {
+    transform: scale(1.05);
+}
+
+.flags-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.flag {
+    height: 40px;
+    width: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.flag:hover {
+    transform: translateY(-3px);
+}
+
 header::before {
     content: '';
     position: absolute;
@@ -440,6 +478,23 @@ footer {
     
     section {
         padding: 1.5rem;
+    }
+
+    .header-logos {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .erasmus-logo {
+        height: 60px;
+    }
+    
+    .flags-container {
+        gap: 10px;
+    }
+    
+    .flag {
+        height: 30px;
     }
 }
 
