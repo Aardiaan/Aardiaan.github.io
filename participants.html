@@ -3,80 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Galeria zdjęć - Erasmus+ Turcja - Manavgat 2025</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #af382d;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        .gallery-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .gallery-container img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #af382d;
-            color: white;
-            margin-top: 20px;
-        }
-
-        .back-link {
-            display: block;
-            text-align: center;
-            font-size: 1.2em;
-            color: #4CAF50;
-            text-decoration: none;
-            margin-top: 20px;
-        }
-
-        .back-link:hover {
-            color: #45a049;
-        
-        }
-    </style>
+    <title>Uczestnicy - Erasmus+ Turcja - Manavgat 2025</title>
+    <link href="styl.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Galeria zdjęć - Erasmus+ Walencja 2023</h1>
+        <h1>Uczestnicy projektu</h1>
+        <p>Uczniowie biorący udział w projekcie Erasmus+ Turcja-Manavgat 2025</p>
     </header>
 
-    <div class="gallery-container">
-        <img src="linux.jfif">
-        <img src="linux.jfif">
-        <img src="linux.jfif">
-    </div>
+    <nav>
+        <div id="pbox">
+            <a href="main.html" id="przycisk">GŁÓWNA</a>
+            <a href="participants.html" id="przycisk">UCZESTNICY</a>
+            <a href="institution.html" id="przycisk">INSTYTUCJE</a>
+            <a href="galery.html" id="przycisk">GALERIA</a>
+        </div>
+    </nav>
 
-    <a href="main.html" class="back-link">Wróć do strony głównej</a>
+    <main>
+        <section>
+            <h2>Uczestnicy projektu</h2>
+            <p>W projekcie Erasmus+ Turcja-Manavgat 2025 uczestniczy 20 uczniów Zespołu Szkół Technicznych. Są to uczniowie klas o profilach:</p>
+            <ul>
+                <li>Technik informatyk</li>
+                <li>Technik programista</li>
+                <li>Technik elektronik</li>
+            </ul>
+            
+            <h3>Opiekunowie:</h3>
+            <div class="participants-grid">
+                <div class="participant-card">
+                    <img src="linux.jfif" alt="Zdjęcie opiekuna">
+                    <div class="participant-info">
+                        <h4>Jan Kowalski</h4>
+                        <p>Koordynator projektu</p>
+                    </div>
+                </div>
+                <div class="participant-card">
+                    <img src="linux.jfif" alt="Zdjęcie opiekuna">
+                    <div class="participant-info">
+                        <h4>Anna Nowak</h4>
+                        <p>Nauczyciel języka angielskiego</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Uczniowie:</h3>
+            <div class="participants-grid">
+                <div class="participant-card">
+                    <img src="linux.jfif" alt="Zdjęcie uczestnika">
+                    <div class="participant-info">
+                        <h4>Uczeń 1</h4>
+                        <p>Technik informatyk</p>
+                    </div>
+                </div>
+                <div class="participant-card">
+                    <img src="linux.jfif" alt="Zdjęcie uczestnika">
+                    <div class="participant-info">
+                        <h4>Uczeń 2</h4>
+                        <p>Technik programista</p>
+                    </div>
+                </div>
+                <div class="participant-card">
+                    <img src="linux.jfif" alt="Zdjęcie uczestnika">
+                    <div class="participant-info">
+                        <h4>Uczeń 3</h4>
+                        <p>Technik elektronik</p>
+                    </div>
+                </div>
+                <div class="participant-card">
+                    <img src="linux.jfif" alt="Zdjęcie uczestnika">
+                    <div class="participant-info">
+                        <h4>Uczeń 4</h4>
+                        <p>Technik informatyk</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2025 Wiktor Ludera</p>
+        <p>&copy; 2025 Erasmus+ Turcja-Manavgat | Stronę przygotował: Wiktor Ludera</p>
     </footer>
 </body>
 </html>

@@ -167,12 +167,104 @@ h2, h3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    align-items: start; /* Align items at the top */
 }
 
 #about_project, #project_goals {
-    height: 100%;
+    height: auto; /* Change from 100% to auto */
+    display: flex;
+    flex-direction: column;
+    min-height: 80%; /* Set minimum height instead of fixed height */
 }
 
+/* Make the section boxes have equal heights */
+@supports (display: grid) {
+    #text_main {
+        grid-auto-rows: 1fr; /* Force equal heights */
+    }
+}
+
+/* Enhance text readability and section styling */
+section {
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Add subtle accent to sections */
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #af382d, #e05e51);
+}
+
+/* Enhance heading styles */
+h2, h3 {
+    color: #af382d;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+    position: relative;
+}
+
+h3::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #af382d;
+}
+
+/* Improve paragraph spacing */
+p {
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+}
+
+/* Add subtle animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+main section {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+#index_main {
+    animation-delay: 0.1s;
+}
+
+#text_main section:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+#text_main section:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+/* Enhance participants page */
+@media screen and (max-width: 768px) {
+    #text_main {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+}
 /* List Styling */
 ul {
     list-style-type: square;
@@ -334,5 +426,86 @@ footer {
     
     section {
         padding: 1.5rem;
+    }
+}
+
+/* Add these styles at the end of your CSS file */
+
+/* Participants Page Styling */
+.participants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 1.5rem 0;
+}
+
+.participant-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.participant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.participant-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.participant-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.participant-info h4 {
+    margin: 0 0 5px 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.participant-info p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Add a subtle gradient overlay on hover */
+.participant-card {
+    position: relative;
+}
+
+.participant-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(175, 56, 45, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.participant-card:hover::after {
+    opacity: 1;
+}
+
+/* Responsive adjustments for participants page */
+@media screen and (max-width: 768px) {
+    .participants-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .participants-grid {
+        grid-template-columns: 1fr;
     }
 }
