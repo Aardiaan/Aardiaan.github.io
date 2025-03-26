@@ -846,3 +846,84 @@ footer {
         padding: 10px;
     }
 }
+
+/* Practice Locations Styling */
+.practice-locations {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 2rem 0;
+}
+
+.practice-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.practice-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.practice-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 3px solid #af382d;
+}
+
+.practice-info {
+    padding: 20px;
+}
+
+.practice-info h3 {
+    margin-top: 0;
+    color: #af382d;
+    font-size: 1.4rem;
+}
+
+.practice-type {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.practice-info h4 {
+    color: #333;
+    margin: 15px 0 10px 0;
+    font-size: 1.1rem;
+}
+
+/* Media queries for larger screens */
+@media screen and (min-width: 768px) {
+    .practice-card {
+        flex-direction: row;
+        align-items: stretch;
+    }
+    
+    .practice-card img {
+        width: 30%;
+        height: auto;
+        border-bottom: none;
+        border-right: 3px solid #af382d;
+    }
+    
+    .practice-info {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .practice-card img {
+        height: 180px;
+    }
+}
