@@ -15,56 +15,14 @@ body {
     margin: 0 auto;
 }
 
-/* Header Styles - Updated to be more compact and integrated with nav */
+/* Header Styles - Redesigned to be more compact and attractive */
 header {
     background-color: #af382d;
     color: white;
-    padding: 0.5rem 1rem;
-    text-align: center;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Logo and flags container */
-.header-logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 10px;
-    gap: 20px;
-}
-
-.erasmus-logo {
-    height: 60px;
-    width: auto;
-    transition: transform 0.3s ease;
-}
-
-.erasmus-logo:hover {
-    transform: scale(1.05);
-}
-
-.flags-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.flag {
-    height: 30px;
-    width: auto;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.flag:hover {
-    transform: translateY(-3px);
 }
 
 header::before {
@@ -74,73 +32,230 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(175, 56, 45, 0.8) 0%, rgba(175, 56, 45, 0.9) 100%);
+    background: linear-gradient(135deg, rgba(175, 56, 45, 0.9) 0%, rgba(140, 46, 37, 0.95) 100%);
     z-index: -1;
+}
+
+/* New flex container for header content */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo and title container */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+/* Logo styling */
+.erasmus-logo {
+    height: 65px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.erasmus-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Title container */
+.header-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 header h1 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     letter-spacing: 0.5px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
 }
 
 header p {
-    margin-top: 0.25rem;
-    font-size: 0.9rem;
+    margin: 5px 0 0 0;
+    font-size: 0.85rem;
     opacity: 0.9;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-/* Navigation Styles - Updated for integration with header */
+/* Flags container */
+.flags-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.flag {
+    height: 42px;
+    width: auto;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.flag:hover {
+    transform: translateY(-2px);
+}
+
+/* Navigation Styles - Updated for horizontal integration */
 nav {
-    background-color: #8c2e25;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 0.3rem 0;
-    margin-top: 0;
-    width: 60%;
-    border-radius: 10px;
+    background-color: rgba(140, 46, 37, 0.8);
+    border-radius: 8px;
+    margin-top: 12px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #pbox {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 6px;
     margin: 0;
-    padding: 0 20px;
+    padding: 8px 15px;
+    margin-top: 6px;
 }
 
-/* Button Styling - Updated for compact nav */
+/* Button Styling */
 #przycisk {
     background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     text-decoration: none;
     color: white;
     display: inline-block;
-    padding: 8px 20px;
+    padding: 6px 15px;
     box-sizing: border-box;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     transition: all 0.3s ease;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 #przycisk:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.15);
     transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 /* Integrated header-nav container */
 .header-nav-container {
     width: 100%;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
     position: relative;
     z-index: 10;
+}
+
+/* Responsive adjustments for header */
+@media screen and (min-width: 992px) {
+    header {
+        padding: 0.8rem 1.5rem;
+    }
+    
+    .header-content {
+        align-items: center;
+    }
+    
+    nav {
+        margin-top: 0;
+        background-color: transparent;
+        padding: 0;
+    }
+    
+    .header-content {
+        gap: 30px;
+    }
+    
+    #pbox {
+        padding: 0;
+    }
+    
+    #przycisk {
+        font-size: 0.75rem;
+        padding: 5px 12px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header-left {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .header-title {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .flags-container {
+        margin: 10px 0;
+    }
+    
+    nav {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    
+    #pbox {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #przycisk {
+        width: 80%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .image-container img {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    
+    header {
+        padding: 1.5rem 1rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+
+    .header-logos {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .erasmus-logo {
+        height: 60px;
+    }
+    
+    .flags-container {
+        gap: 10px;
+    }
+    
+    .flag {
+        height: 30px;
+    }
 }
 
 /* Content Sections */
