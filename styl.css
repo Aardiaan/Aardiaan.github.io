@@ -23,7 +23,7 @@ header {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease, background-color 0.3s ease;
     z-index: 1000;
 }
 
@@ -36,6 +36,27 @@ header {
     padding: 0.4rem 1rem;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
     animation: slideDown 0.5s ease;
+    background-color: transparent; /* Remove background color */
+    transition: all 0.3s ease;
+}
+
+/* Modify the header::before for sticky state to make it transparent */
+.sticky-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(175, 56, 45, 0.75); /* Semi-transparent background */
+    z-index: -1;
+    backdrop-filter: blur(4px); /* Slight blur effect for better readability */
+    -webkit-backdrop-filter: blur(4px); /* For Safari support */
+}
+
+/* Add hover effect to increase opacity on hover */
+.sticky-header:hover::before {
+    background: rgba(175, 56, 45, 0.9); /* More opaque on hover */
 }
 
 @keyframes slideDown {
@@ -71,7 +92,9 @@ header {
     transition: height 0.3s ease;
 }
 
+/* Make the navigation background transparent in sticky mode */
 .sticky-header nav {
+    background-color: rgba(140, 46, 37, 0.6);
     margin-top: 8px;
     transition: all 0.3s ease;
 }
@@ -159,6 +182,7 @@ body.has-sticky-header {
     }
 }
 
+/* Update the original header::before to work with the sticky state */
 header::before {
     content: '';
     position: absolute;
@@ -168,6 +192,7 @@ header::before {
     bottom: 0;
     background: linear-gradient(135deg, rgba(175, 56, 45, 0.9) 0%, rgba(140, 46, 37, 0.95) 100%);
     z-index: -1;
+    transition: background 0.3s ease;
 }
 
 /* New flex container for header content */
@@ -244,7 +269,7 @@ nav {
     background-color: rgba(140, 46, 37, 0.8);
     border-radius: 8px;
     margin-top: 12px;
-    max-width: 1200px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
