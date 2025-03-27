@@ -1,8 +1,24 @@
+/* CSS Variables for Theme */
+:root {
+    --text: #e8f5f6;
+    --background: #060f10;
+    --primary: #9ad7d6;
+    --secondary: #2c476d;
+    --accent: #5c69be;
+    --primary-light: rgba(154, 215, 214, 0.75);
+    --primary-lighter: rgba(154, 215, 214, 0.2);
+    --primary-dark: #7abcbb;
+    --accent-light: rgba(92, 105, 190, 0.7);
+    --text-light: #b8d2d3;
+    --text-on-primary: #060f10;
+    --text-on-accent: white;
+}
+
 /* Base Styles */
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: var(--background);
+    color: var(--text);
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -17,10 +33,10 @@ body {
 
 /* Header Styles - Redesigned to be more compact and attractive */
 header {
-    background-color: #5EB160;
-    color: white;
+    background-color: var(--primary);
+    color: var(--text-on-primary);
     padding: 1rem;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease, background-color 0.3s ease;
@@ -34,7 +50,7 @@ header {
     left: 0;
     right: 0;
     padding: 0.4rem 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
     animation: slideDown 0.5s ease;
     background-color: transparent; /* Remove background color */
     transition: all 0.3s ease;
@@ -48,7 +64,7 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(94, 177, 96, 0.75); /* Semi-transparent background */
+    background: var(--primary-light); /* Semi-transparent background */
     z-index: -1;
     backdrop-filter: blur(4px); /* Slight blur effect for better readability */
     -webkit-backdrop-filter: blur(4px); /* For Safari support */
@@ -56,7 +72,7 @@ header {
 
 /* Add hover effect to increase opacity on hover */
 .sticky-header:hover::before {
-    background: rgba(94, 177, 96, 0.9); /* More opaque on hover */
+    background: rgba(154, 215, 214, 0.9); /* More opaque on hover */
 }
 
 @keyframes slideDown {
@@ -94,7 +110,7 @@ header {
 
 /* Make the navigation background transparent in sticky mode */
 .sticky-header nav {
-    background-color: rgba(74, 142, 76, 0.6);
+    background-color: rgba(154, 215, 214, 0.6);
     margin-top: 8px;
     transition: all 0.3s ease;
 }
@@ -190,7 +206,7 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(94, 177, 96, 0.9) 0%, rgba(74, 142, 76, 0.95) 100%);
+    background: linear-gradient(135deg, rgba(154, 215, 214, 0.9) 0%, rgba(154, 215, 214, 0.95) 100%);
     z-index: -1;
     transition: background 0.3s ease;
 }
@@ -234,7 +250,7 @@ header h1 {
     margin: 0;
     font-size: 1.4rem;
     letter-spacing: 0.5px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     font-weight: 700;
 }
 
@@ -256,7 +272,7 @@ header p {
     height: 42px;
     width: auto;
     border-radius: 3px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
 
@@ -266,7 +282,7 @@ header p {
 
 /* Navigation Styles - Updated for horizontal integration */
 nav {
-    background-color: rgba(74, 142, 76, 0.8);
+    background-color: rgba(154, 215, 214, 0.8);
     border-radius: 8px;
     margin-top: 12px;
     max-width: 600px;
@@ -287,10 +303,10 @@ nav {
 /* Button Styling */
 #przycisk {
     background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(6, 15, 16, 0.3);
     border-radius: 20px;
     text-decoration: none;
-    color: white;
+    color: var(--text-on-primary);
     display: inline-block;
     padding: 6px 15px;
     box-sizing: border-box;
@@ -302,9 +318,10 @@ nav {
 }
 
 #przycisk:hover {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: var(--accent);
     transform: translateY(-2px);
-    border-color: rgba(255, 255, 255, 0.4);
+    border-color: var(--accent);
+    color: var(--text-on-accent);
 }
 
 /* Integrated header-nav container */
@@ -427,9 +444,9 @@ main {
 section {
     margin: 2rem auto;
     padding: 2rem;
-    background-color: white;
+    background-color: #0d1819;
     border-radius: 8px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
 
@@ -438,8 +455,8 @@ section:hover {
 }
 
 h2, h3 {
-    color: #5EB160;
-    border-bottom: 2px solid #eee;
+    color: var(--primary);
+    border-bottom: 2px solid #1a2b2d;
     padding-bottom: 0.5rem;
     margin-top: 0;
 }
@@ -469,13 +486,15 @@ h2, h3 {
 
 #index h4 {
     font-size: 1.5rem;
-    color: #555;
+    color: var(--text-light);
     font-weight: 500;
-    line-height: 1.4;
+    line-height: 1.2;
+    margin: 0;
 }
 
-#index p { /* Pushes the paragraph to the bottom */
+#index p {
     margin-bottom: 0; /* Removes default margin to align with photos */
+    font-size: 15px;
 }
 
 #index_photo {
@@ -491,7 +510,7 @@ h2, h3 {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 15px; /* Added margin between images */
     object-fit: cover; /* Ensures proper image sizing */
@@ -503,7 +522,7 @@ h2, h3 {
 
 #index_photo img:hover {
     transform: scale(1.02);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 #index_photo h3 {
@@ -516,17 +535,17 @@ h2, h3 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Align content to top */
-    background-color: white;
+    background-color: #0d1819;
     border-radius: 8px;
     padding: 25px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Restored transition for hover effect */
 }
 
 /* Restore hover effect for these specific sections */
 #index_main > section:hover {
     transform: translateY(-5px); /* Slightly more pronounced lift effect */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
 }
 
 /* Override the general section::before styling to give these sections a distinct accent */
@@ -537,7 +556,7 @@ h2, h3 {
     left: 0;
     width: 100%;
     height: 5px; /* Slightly thicker accent line */
-    background: linear-gradient(90deg, #5EB160, #7BC97D);
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
     transition: height 0.3s ease; /* Animate the accent line */
 }
 
@@ -571,9 +590,9 @@ h2, h3 {
 section {
     margin: 2rem auto;
     padding: 2rem;
-    background-color: white;
+    background-color: #0d1819;
     border-radius: 8px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -581,7 +600,7 @@ section {
 
 section:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
 /* Add subtle accent to sections */
@@ -592,13 +611,13 @@ section::before {
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, #5EB160, #7BC97D);
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
 }
 
 /* Enhance heading styles */
 h2, h3 {
-    color: #5EB160;
-    border-bottom: 2px solid #eee;
+    color: var(--primary);
+    border-bottom: 2px solid #1a2b2d;
     padding-bottom: 0.5rem;
     margin-top: 0;
     position: relative;
@@ -611,7 +630,7 @@ h3::after {
     left: 0;
     width: 50px;
     height: 2px;
-    background-color: #5EB160;
+    background-color: var(--primary);
 }
 
 /* Improve paragraph spacing */
@@ -666,7 +685,7 @@ ul li::before {
     top: 10px;
     width: 6px;
     height: 6px;
-    background-color: #5EB160;
+    background-color: var(--accent);
     border-radius: 50%;
 }
 
@@ -684,235 +703,17 @@ ul li::before {
     min-width: 250px;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     object-fit: cover;
 }
 
 .image-container img:hover {
     transform: scale(1.03);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
 }
 
 /* Gallery Page Styling */
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.gallery-container img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-container img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Back Link Styling */
-.back-link {
-    display: block;
-    text-align: center;
-    font-size: 1.2em;
-    color: #5EB160;
-    text-decoration: none;
-    margin: 30px auto;
-    padding: 10px 20px;
-    max-width: 250px;
-    border: 2px solid #5EB160;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-}
-
-.back-link:hover {
-    background-color: #5EB160;
-    color: white;
-    transform: translateY(-2px);
-}
-
-/* Footer Styling */
-footer {
-    text-align: center;
-    padding: 1.5rem;
-    background-color: #5EB160;
-    color: white;
-    margin-top: 2rem;
-    box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Institution Page Styling */
-.institution-card {
-    display: flex;
-    flex-direction: column;
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    transition: transform 0.3s ease;
-}
-
-.institution-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.institution-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.institution-info {
-    padding: 20px;
-}
-
-.institution-info h3 {
-    margin-top: 0;
-    color: #5EB160;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .container {
-        width: 95%;
-    }
-    
-    #pbox {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    #przycisk {
-        width: 80%;
-        text-align: center;
-        margin: 5px 0;
-    }
-
-    .image-container img {
-        width: 100%;
-        margin-bottom: 1.5rem;
-    }
-    
-    header {
-        padding: 1.5rem 1rem;
-    }
-    
-    section {
-        padding: 1.5rem;
-    }
-
-    .header-logos {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .erasmus-logo {
-        height: 60px;
-    }
-    
-    .flags-container {
-        gap: 10px;
-    }
-    
-    .flag {
-        height: 30px;
-    }
-}
-
-/* Add these styles at the end of your CSS file */
-
-/* Participants Page Styling */
-.participants-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    margin: 1.5rem 0;
-}
-
-.participant-card {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.participant-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-.participant-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.participant-info {
-    padding: 15px;
-    text-align: center;
-}
-
-.participant-info h4 {
-    margin: 0 0 5px 0;
-    color: #333;
-    font-size: 1.2rem;
-}
-
-.participant-info p {
-    margin: 0;
-    color: #666;
-    font-size: 0.9rem;
-}
-
-/* Add a subtle gradient overlay on hover */
-.participant-card {
-    position: relative;
-}
-
-.participant-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(94, 177, 96, 0.1) 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-}
-
-.participant-card:hover::after {
-    opacity: 1;
-}
-
-/* Responsive adjustments for participants page */
-@media screen and (max-width: 768px) {
-    .participants-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .participants-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Add these styles at the end of your CSS file */
-
-/* Gallery Page Styling - Updated */
 .gallery-main {
     max-width: 1200px;
     margin: 0 auto;
@@ -923,6 +724,7 @@ footer {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -939,7 +741,7 @@ footer {
     position: relative;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     line-height: 0; /* Remove line height spacing */
@@ -947,7 +749,7 @@ footer {
 
 .gallery-item:hover {
     transform: scale(1.03);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .gallery-item img {
@@ -965,7 +767,7 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 10px;
     text-align: center;
@@ -989,9 +791,9 @@ footer {
 }
 
 .pagination-btn {
-    background-color: white;
-    border: 2px solid #5EB160;
-    color: #5EB160;
+    background-color: #0d1819;
+    border: 2px solid var(--accent);
+    color: var(--accent);
     padding: 8px 15px;
     border-radius: 25px;
     cursor: pointer;
@@ -1003,7 +805,7 @@ footer {
 }
 
 .pagination-btn:hover {
-    background-color: #5EB160;
+    background-color: var(--accent);
     color: white;
     transform: translateY(-2px);
 }
@@ -1020,21 +822,21 @@ footer {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    border: 2px solid #ddd;
+    border: 2px solid #1a2b2d;
     cursor: pointer;
     font-weight: 600;
     transition: all 0.3s ease;
 }
 
 .page-indicator:hover {
-    border-color: #5EB160;
-    color: #5EB160;
+    border-color: var(--primary);
+    color: var(--primary);
 }
 
 .page-indicator.active {
-    background-color: #5EB160;
-    color: white;
-    border-color: #5EB160;
+    background-color: var(--primary);
+    color: var(--text-on-primary);
+    border-color: var(--primary);
 }
 
 /* Lightbox Styling */
@@ -1044,7 +846,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.9);
     display: none;
     align-items: center;
     justify-content: center;
@@ -1065,7 +867,7 @@ footer {
     max-height: 80vh;
     object-fit: contain;
     border-radius: 4px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     opacity: 1;
     transition: opacity 0.3s ease;
 }
@@ -1089,7 +891,7 @@ footer {
 }
 
 .close-lightbox:hover {
-    color: #5EB160;
+    color: var(--primary);
 }
 
 .lightbox-nav {
@@ -1111,7 +913,7 @@ footer {
 }
 
 .lightbox-nav:hover {
-    background: rgba(94, 177, 96, 0.7);
+    background: rgba(154, 215, 214, 0.7);
 }
 
 .lightbox-nav.prev {
@@ -1195,24 +997,24 @@ footer {
 .practice-card {
     display: flex;
     flex-direction: column;
-    background: white;
+    background: #0d1819;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #eee;
+    border: 1px solid #1a2b2d;
 }
 
 .practice-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .practice-card img {
     width: 100%;
     height: 250px;
     object-fit: cover;
-    border-bottom: 3px solid #5EB160;
+    border-bottom: 3px solid var(--primary);
 }
 
 .practice-info {
@@ -1221,19 +1023,19 @@ footer {
 
 .practice-info h3 {
     margin-top: 0;
-    color: #5EB160;
+    color: var(--primary);
     font-size: 1.4rem;
 }
 
 .practice-type {
     font-style: italic;
-    color: #666;
+    color: #a1c1c2;
     margin-bottom: 15px;
     font-weight: 500;
 }
 
 .practice-info h4 {
-    color: #333;
+    color: #c4dfe0;
     margin: 15px 0 10px 0;
     font-size: 1.1rem;
 }
@@ -1249,7 +1051,7 @@ footer {
         width: 30%;
         height: auto;
         border-bottom: none;
-        border-right: 3px solid #5EB160;
+        border-right: 3px solid var(--primary);
     }
     
     .practice-info {
@@ -1315,7 +1117,7 @@ footer {
     /* Condense the navigation in sticky mode */
     .sticky-header nav {
         margin-top: 2px;
-        background-color: rgba(74, 142, 76, 0.8);
+        background-color: rgba(154, 215, 214, 0.8);
     }
     
     .sticky-header #pbox {
@@ -1407,4 +1209,119 @@ footer {
         margin: 2px;
     }
     /* ...keep other existing mobile optimizations... */
+}
+
+/* Participants Page Styling - Fixed */
+.participants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin: 1.5rem 0;
+}
+
+.participant-card {
+    background: #0d1819;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #1a2b2d;
+}
+
+.participant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.participant-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-bottom: 2px solid var(--primary);
+}
+
+.participant-info {
+    padding: 15px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.participant-info h4 {
+    margin: 0 0 5px 0;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.participant-info p {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Add a subtle gradient overlay on hover */
+.participant-card {
+    position: relative;
+}
+
+.participant-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(154, 215, 214, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.participant-card:hover::after {
+    opacity: 1;
+}
+
+/* Responsive adjustments for participants page */
+@media screen and (max-width: 768px) {
+    .participants-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+    }
+    
+    .participant-card img {
+        height: 160px;
+    }
+    
+    .participant-info h4 {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .participants-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 10px;
+    }
+    
+    .participant-card img {
+        height: 140px;
+    }
+    
+    .participant-info {
+        padding: 10px;
+    }
+    
+    .participant-info h4 {
+        font-size: 1rem;
+    }
+    
+    .participant-info p {
+        font-size: 0.8rem;
+    }
 }
