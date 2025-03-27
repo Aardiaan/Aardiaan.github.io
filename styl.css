@@ -472,7 +472,7 @@ h2, h3 {
 
 #index {
     flex: 1;
-    min-width: 300px;
+    min-width: 200px;
     display: flex; /* Added display flex */
     flex-direction: column; /* Added to organize content vertically */
     height: 100%; /* Ensures full height */
@@ -499,7 +499,7 @@ h2, h3 {
 
 #index_photo {
     flex: 1;
-    min-width: 300px;
+    min-width: 200px;
     text-align: center;
     display: flex; /* Added display flex */
     flex-direction: column; /* Added to organize content vertically */
@@ -584,6 +584,27 @@ h2, h3 {
     #text_main {
         grid-auto-rows: 1fr; /* Force equal heights */
     }
+}
+
+/* Apply hover effects to text_main sections similar to index_main */
+#text_main > section:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4) !important; /* Enhanced shadow on hover */
+}
+
+/* Apply accent line styling to text_main sections */
+#text_main > section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px; /* Slightly thicker accent line */
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    transition: height 0.3s ease; /* Animate the accent line */
+}
+
+#text_main > section:hover::before {
+    height: 7px; /* Grow the accent line on hover */
 }
 
 /* Enhance text readability and section styling */
@@ -1323,5 +1344,71 @@ ul li::before {
     
     .participant-info p {
         font-size: 0.8rem;
+    }
+}
+
+/* Institution Page Styling */
+.institution-card {
+    display: flex;
+    flex-direction: column;
+    background: #0d1819;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+    border: 1px solid #1a2b2d;
+}
+
+.institution-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.institution-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--primary);
+}
+
+.institution-info {
+    padding: 20px;
+}
+
+.institution-info h3 {
+    margin-top: 0;
+    color: var(--primary);
+    font-size: 1.4rem;
+}
+
+.institution-info p {
+    margin-bottom: 15px;
+}
+
+/* Media queries for larger screens - institution cards */
+@media screen and (min-width: 768px) {
+    .institution-card {
+        flex-direction: row;
+        align-items: stretch;
+    }
+    
+    .institution-card img {
+        width: 30%;
+        height: auto;
+        border-bottom: none;
+        border-right: 3px solid var(--primary);
+    }
+    
+    .institution-info {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .institution-card img {
+        height: 180px;
     }
 }
