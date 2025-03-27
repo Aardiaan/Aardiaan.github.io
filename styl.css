@@ -978,6 +978,43 @@ ul li::before {
         height: 40px;
         font-size: 1.2rem;
     }
+    
+    /* Mobile optimization for gallery pagination */
+    .pagination {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .page-indicators {
+        order: 3; /* Move page indicators below the prev/next buttons */
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5px 0;
+        overflow-x: auto; /* Allow horizontal scrolling if needed */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+        scrollbar-width: none; /* Hide scrollbar on Firefox */
+    }
+    
+    .page-indicators::-webkit-scrollbar {
+        display: none; /* Hide scrollbar on Chrome/Safari */
+    }
+    
+    .page-indicator {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+        margin: 2px;
+    }
+    
+    /* Make pagination buttons full width */
+    .pagination-btn {
+        flex: 1;
+        min-width: 120px;
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -1004,6 +1041,22 @@ ul li::before {
     #lightbox-caption {
         font-size: 1rem;
         padding: 10px;
+    }
+    
+    .page-indicator {
+        width: 24px;
+        height: 24px;
+        font-size: 0.75rem;
+        margin: 1px;
+    }
+    
+    .pagination {
+        gap: 5px;
+    }
+    
+    .pagination-btn {
+        font-size: 0.8rem;
+        padding: 6px 10px;
     }
 }
 
