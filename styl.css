@@ -1613,6 +1613,40 @@ footer {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Container for iframe and its link button */
+.iframe-link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Style the link as a button */
+.post-link-button {
+    display: inline-block;
+    background-color: var(--primary-dark);
+    color: var(--text-on-primary);
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.post-link-button:hover {
+    background-color: var(--accent);
+    color: var(--text-on-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 /* Responsive adjustments for Facebook posts */
 @media screen and (max-width: 960px) {
     .post-container {
@@ -1628,6 +1662,10 @@ footer {
     }
     
     .post-placeholder {
+        width: 85%;
+    }
+    
+    .iframe-link-container {
         width: 100%;
     }
 }
@@ -1657,6 +1695,12 @@ footer {
         min-height: 150px;
         padding: 15px;
         font-size: 0.9rem;
+    }
+    
+    .post-link-button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        width: 85%;
     }
 }
 
