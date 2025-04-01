@@ -82,14 +82,14 @@
                             <iframe src="https://zsm.resman.pl/praktyki-zawodowe-w-turcji/" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" class="facebook-iframe"></iframe>
                             <a href="https://zsm.resman.pl/praktyki-zawodowe-w-turcji/" target="_blank" class="post-link-button">Zobacz więcej na stronie ZSM</a>
                         </div>
-                        <div class="post-placeholder">
-                            <!-- Placeholder for second post -->
-                            <p>Tutaj pojawi się kolejny post</p>
+                        <div class="iframe-link-container">
+                            <iframe src="https://zsm.resman.pl/praktyki-zawodowe-w-turcji-2/" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" class="facebook-iframe"></iframe>
+                            <a href="https://zsm.resman.pl/praktyki-zawodowe-w-turcji-2/" target="_blank" class="post-link-button">Zobacz więcej na stronie ZSM</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Miejsce na kolejne posty -->
+
             </div>
         </section>
     </main>
@@ -109,7 +109,7 @@
         </div>
     </footer>
     
-    <!-- Fixed Sticky Header JavaScript -->
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             try {
@@ -118,11 +118,11 @@
                 const headerHeight = headerContainer.offsetHeight;
                 let isSticky = false;
                 
-                // Function to handle scroll with better performance
+
                 function handleScroll() {
                     const scrollY = window.scrollY || window.pageYOffset;
                     
-                    if (scrollY > 100) { // Increased threshold for better UX
+                    if (scrollY > 100) { 
                         if (!isSticky) {
                             header.classList.add('sticky-header');
                             document.body.classList.add('has-sticky-header');
@@ -139,7 +139,7 @@
                     }
                 }
                 
-                // Use debounced scroll for performance
+
                 let scrollTimeout;
                 window.addEventListener('scroll', function() {
                     if (!scrollTimeout) {
@@ -150,10 +150,10 @@
                     }
                 });
                 
-                // Initial check
+
                 handleScroll();
                 
-                // Update header height on resize
+
                 let resizeTimeout;
                 window.addEventListener('resize', function() {
                     clearTimeout(resizeTimeout);

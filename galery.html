@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria zdjęć - Erasmus+ Turcja - Manavgat 2025</title>
     <link href="styl.css" rel="stylesheet">
-    <!-- Font Awesome for navigation icons -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -40,9 +40,9 @@
     </div>
 
     <main class="gallery-main">
-        <!-- Gallery Pages Container -->
+
         <div class="gallery-pages-container">
-            <!-- Page 1 -->
+
             <div class="gallery-page active" data-page="1">
                 <div class="gallery-container">
                     <div class="gallery-item" onclick="openLightbox('galeria/zdj1.jpeg', 'Zdjęcie z projektu 1')">
@@ -72,7 +72,7 @@
                 </div>
             </div>
             
-            <!-- Page 2 -->
+
             <div class="gallery-page" data-page="2">
                 <div class="gallery-container">
                     <div class="gallery-item" onclick="openLightbox('galeria/zdj7.jpeg', 'Zdjęcie z projektu 7')">
@@ -102,7 +102,7 @@
                 </div>
             </div>
             
-            <!-- Page 3 -->
+
             <div class="gallery-page" data-page="3">
                 <div class="gallery-container">
                     <div class="gallery-item" onclick="openLightbox('galeria/zdj13.jpeg', 'Zdjęcie z projektu 13')">
@@ -132,7 +132,7 @@
                 </div>
             </div>
 
-            <!--stronka 4 uwu-->
+
             <div class="gallery-page" data-page="4">
                 <div class="gallery-container">
                     <div class="gallery-item" onclick="openLightbox('galeria/zdj19.jpeg', 'Zdjęcie z projektu 19')">
@@ -162,7 +162,7 @@
                 </div>
             </div>
 
-            <!--stronka 5 kys-->
+
             <div class="gallery-page" data-page="5">
                 <div class="gallery-container">
                     <div class="gallery-item" onclick="openLightbox('galeria/zdj25.jpeg', 'Zdjęcie z projektu 25')">
@@ -191,7 +191,7 @@
                     </div>
                 </div>
             </div>
-            <!--stronka 6-->
+
             <div class="gallery-page" data-page="6">
                 <div class="gallery-container">
                     <div class="gallery-item" onclick="openLightbox('galeria/zdj31.jpeg', 'Zdjęcie z projektu 31')">
@@ -220,7 +220,7 @@
                     </div>
                 </div>
             </div>
-            <!--stronka 7-->
+
             <div class="gallery-page" data-page="7">
                 <div class="gallery-container">
                     <div class="gallery-item" onclick="openLightbox('galeria/zdj37.jpeg', 'Zdjęcie z projektu 37')">
@@ -250,7 +250,7 @@
                 </div>
             </div>
 
-            <!--stronka 8-->
+
             <div class="gallery-page" data-page="8">
                 <div class="gallery-container">
                     <div class="gallery-item" onclick="openLightbox('galeria/zdj43.jpeg', 'Zdjęcie z projektu 43')">
@@ -280,7 +280,7 @@
                 </div>
             </div>
 
-            <!--stronka 9-->
+
             <div class="gallery-page" data-page="9">
                 <div class="gallery-container">
                     <div class="gallery-item" onclick="openLightbox('galeria/zdj49.jpeg', 'Zdjęcie z projektu 49')">
@@ -310,7 +310,7 @@
                 </div>
             </div>
 
-            <!--stronka 10-->
+
             <div class="gallery-page" data-page="10">
                 <div class="gallery-container">
                     <div class="gallery-item" onclick="openLightbox('galeria/zdj55.jpg', 'Zdjęcie z projektu 55')">
@@ -339,7 +339,7 @@
                     </div>
                 </div>
             </div>
-            <!--stronka 11-->
+
             <div class="gallery-page" data-page="11">
                 <div class="gallery-container">
                     <div class="gallery-item" onclick="openLightbox('galeria/zdj61.jpg', 'Zdjęcie z projektu 61')">
@@ -369,7 +369,7 @@
                 </div>
             </div>
 
-            <!--stronka 12-->
+
             <div class="gallery-page" data-page="12">
                 <div class="gallery-container">
                     <div class="gallery-item" onclick="openLightbox('galeria/zdj67.jpg', 'Zdjęcie z projektu 67')">
@@ -399,7 +399,7 @@
                 </div>
             </div>
 
-            <!--stronka 13-->
+
             <div class="gallery-page" data-page="13">
                 <div class="gallery-container">
                     <div class="gallery-item" onclick="openLightbox('galeria/zdj73.jpg', 'Zdjęcie z projektu 73')">
@@ -430,7 +430,7 @@
             </div>
         </div>
         
-        <!-- Pagination -->
+
         <div class="pagination">
             <button class="pagination-btn" onclick="changePage('prev')">
                 <i class="fas fa-chevron-left"></i> Poprzednia
@@ -455,7 +455,7 @@
             </button>
         </div>
         
-        <!-- Lightbox -->
+
         <div id="lightbox" class="lightbox">
             <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
             <div class="lightbox-content">
@@ -486,7 +486,7 @@
         </div>
     </footer>
 
-    <!-- Fixed Sticky Header JavaScript -->
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             try {
@@ -495,11 +495,11 @@
                 const headerHeight = headerContainer.offsetHeight;
                 let isSticky = false;
                 
-                // Function to handle scroll with better performance
+
                 function handleScroll() {
                     const scrollY = window.scrollY || window.pageYOffset;
                     
-                    if (scrollY > 100) { // Increased threshold for better UX
+                    if (scrollY > 100) { 
                         if (!isSticky) {
                             header.classList.add('sticky-header');
                             document.body.classList.add('has-sticky-header');
@@ -516,7 +516,7 @@
                     }
                 }
                 
-                // Use debounced scroll for performance
+
                 let scrollTimeout;
                 window.addEventListener('scroll', function() {
                     if (!scrollTimeout) {
@@ -527,10 +527,10 @@
                     }
                 });
                 
-                // Initial check
+
                 handleScroll();
                 
-                // Update header height on resize
+
                 let resizeTimeout;
                 window.addEventListener('resize', function() {
                     clearTimeout(resizeTimeout);
@@ -549,14 +549,14 @@
         });
     </script>
 
-    <!-- JavaScript for pagination and lightbox -->
+
     <script>
         let currentPage = 1;
         const totalPages = 13;
         let currentLightboxIndex = 0;
         const galleryItems = document.querySelectorAll('.gallery-item');
         
-        // Page navigation
+
         function changePage(direction) {
             if (direction === 'next' && currentPage < totalPages) {
                 goToPage(currentPage + 1);
@@ -566,34 +566,34 @@
         }
         
         function goToPage(pageNum) {
-            // Hide all pages
+
             document.querySelectorAll('.gallery-page').forEach(page => {
                 page.classList.remove('active');
             });
             
-            // Show selected page
+
             document.querySelector(`.gallery-page[data-page="${pageNum}"]`).classList.add('active');
             
-            // Update page indicators
+
             document.querySelectorAll('.page-indicator').forEach(indicator => {
                 indicator.classList.remove('active');
             });
             document.querySelector(`.page-indicator[data-page="${pageNum}"]`).classList.add('active');
             
-            // Update current page
+
             currentPage = pageNum;
             
-            // Scroll to top of gallery
+
             document.querySelector('.gallery-main').scrollIntoView({ behavior: 'smooth' });
         }
         
-        // Lightbox functions
+
         function openLightbox(imgSrc, caption) {
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
             const lightboxCaption = document.getElementById('lightbox-caption');
             
-            // Find index of current image for navigation
+
             for (let i = 0; i < galleryItems.length; i++) {
                 const item = galleryItems[i];
                 if (item.querySelector('img').src.includes(imgSrc) && 
@@ -603,17 +603,17 @@
                 }
             }
             
-            // Set image and caption
+
             lightboxImg.src = imgSrc;
             lightboxCaption.textContent = caption;
             
-            // Show lightbox with animation
+
             lightbox.style.display = 'flex';
             setTimeout(() => {
                 lightbox.style.opacity = '1';
             }, 10);
             
-            // Prevent body scrolling
+
             document.body.style.overflow = 'hidden';
         }
         
@@ -624,12 +624,12 @@
                 lightbox.style.display = 'none';
             }, 300);
             
-            // Re-enable body scrolling
+
             document.body.style.overflow = 'auto';
         }
         
         function navigateLightbox(direction) {
-            // Calculate new index
+
             let newIndex;
             if (direction === 'next') {
                 newIndex = (currentLightboxIndex + 1) % galleryItems.length;
@@ -637,24 +637,24 @@
                 newIndex = (currentLightboxIndex - 1 + galleryItems.length) % galleryItems.length;
             }
             
-            // Get page of the new index
+
             const itemsPerPage = 6;
             const pageOfNewIndex = Math.floor(newIndex / itemsPerPage) + 1;
             
-            // If page changed, navigate to that page
+
             if (pageOfNewIndex !== currentPage) {
                 goToPage(pageOfNewIndex);
             }
             
-            // Get new image and caption
+
             const newItem = galleryItems[newIndex];
             const newImgSrc = newItem.querySelector('img').src;
             const newCaption = newItem.querySelector('.gallery-caption').textContent;
             
-            // Update current index
+
             currentLightboxIndex = newIndex;
             
-            // Update lightbox content with animation
+
             const lightboxImg = document.getElementById('lightbox-img');
             const lightboxCaption = document.getElementById('lightbox-caption');
             
@@ -666,14 +666,14 @@
             }, 200);
         }
         
-        // Close lightbox when clicking outside the image
+
         document.getElementById('lightbox').addEventListener('click', function(e) {
             if (e.target === this) {
                 closeLightbox();
             }
         });
         
-        // Keyboard navigation
+
         document.addEventListener('keydown', function(e) {
             if (document.getElementById('lightbox').style.display === 'flex') {
                 if (e.key === 'Escape') {
